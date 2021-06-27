@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/travel_back"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/travel_topsis"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <LinearLayout
+        android:id="@+id/Lonely"
+        android:layout_width="406dp"
+        android:layout_height="599dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <WebView
+            android:id="@+id/best_destination"
+            android:layout_width="match_parent"
+            android:layout_height="597dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Destinations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#90000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/des_text"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/choose_2_or_more_destinations"
+            android:textAlignment="center"
+            android:textColor="#F8F700"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/check_ny"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:button="@null"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/usd"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/new_york_city"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/check_tokyo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:button="@null"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/jpy"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/tokyo"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/check_santorini"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:button="@null"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/grc"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/santorini"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/check_rio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:button="@null"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/brl"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/rio_de_janeiro"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/check_bucharest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#FFFFFF"
+            android:button="@null"
+            android:drawableStart="@drawable/ron"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/bucharest"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/check_cairo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:button="@null"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/egp"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/cairo"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/check_sydney"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:button="@null"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/aud"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/sydney"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Weights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#90000000"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.519">
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/value_the_following_criteria_from_1_to_10"
+            android:textAlignment="center"
+            android:textColor="#F8F700"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/db_text"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/daily_budget"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/db_seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:max="10"
+            android:min="1"
+            android:pointerIcon="vertical_text"
+            android:progress="1"
+            android:scrollbarSize="7sp" />
+
+        <TextView
+            android:id="@+id/db_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#FFDF00"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tr_text"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/activities_and_attractions"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/aa_seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:max="10"
+            android:min="1"
+            android:pointerIcon="arrow"
+            android:progress="1"
+            android:scrollbarSize="7sp" />
+
+        <TextView
+            android:id="@+id/aa_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#FFDF00"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/si_text"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/safety"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/si_seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:max="10"
+            android:min="1"
+            android:pointerIcon="arrow"
+            android:progress="1"
+            android:scrollbarSize="7sp" />
+
+        <TextView
+            android:id="@+id/si_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#FFDF00"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/p_text"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/popularity"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/p_seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:max="10"
+            android:min="1"
+            android:pointerIcon="arrow"
+            android:progress="1"
+            android:scrollbarSize="7sp" />
+
+        <TextView
+            android:id="@+id/p_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#FFDF00"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_button"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="203dp"
+        android:layout_height="67dp"
+        android:background="#FF5722"
+        android:text="@string/start"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.906" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

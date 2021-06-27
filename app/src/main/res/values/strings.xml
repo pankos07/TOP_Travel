@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TOP Travel</string>
+    <string name="travel_topsis">Travel TOPSIS</string>
+    <string name="start">Start</string>
+    <string name="submit">Submit</string>
+    <string name="daily_budget">Daily Budget</string>
+    <string name="activities_and_attractions">Activities and Attractions</string>
+    <string name="safety">Safety</string>
+    <string name="popularity">Popularity</string>
+    <string name="value_the_following_criteria_from_1_to_10">Value the following criteria from 1 to 10</string>
+    <string name="sydney">Sydney</string>
+    <string name="cairo">Cairo</string>
+    <string name="bucharest">Bucharest</string>
+    <string name="rio_de_janeiro">Rio de Janeiro</string>
+    <string name="santorini">Santorini</string>
+    <string name="tokyo">Tokyo</string>
+    <string name="new_york_city">New York City</string>
+    <string name="choose_2_or_more_destinations">Choose 2 or more destinations</string>
+    <string name="exit">Exit</string>
+</resources>
