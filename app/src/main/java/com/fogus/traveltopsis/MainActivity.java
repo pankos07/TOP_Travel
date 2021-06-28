@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,7 +16,11 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Objects;
+import static android.content.ContentValues.TAG;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -165,13 +170,14 @@ public class MainActivity extends AppCompatActivity {
             switch (btn_text) {
                 case 0:
                     //Weight Submit
+                    Log.i(TAG,"TOPSIS: User defines weights for criteria");
                     btn_text = 1;
                     main_btn.setText(R.string.submit);
                     weights.setVisibility(View.VISIBLE);
                     break;
                 case 1:
                     //Destinations Submit
-                    btn_text = 2;
+                    Log.i(TAG,"TOPSIS: User defines possible travel destinations");
                     weights.setVisibility(View.INVISIBLE);
                     double pro_sum = db_seek.getProgress() + aa_seek.getProgress() + si_seek.getProgress() + p_seek.getProgress();
                     db_weight = db_seek.getProgress()/pro_sum;
@@ -179,12 +185,10 @@ public class MainActivity extends AppCompatActivity {
                     si_weight = si_seek.getProgress()/pro_sum;
                     p_weight = p_seek.getProgress()/pro_sum;
                     destinations.setVisibility(View.VISIBLE);
+                    btn_text = 2;
                     break;
                 case 2:
                     //Finishing
-                    btn_text = 3;
-                    destinations.setVisibility(View.INVISIBLE);
-                    main_btn.setText("Results");
 
                     if(ny_c.isChecked())
                     {
@@ -250,6 +254,16 @@ public class MainActivity extends AppCompatActivity {
                         des_size++;
                     }
 
+                    if(des_size < 2)
+                    {
+                        Toast.makeText(getApplicationContext(),"Choose 2 or more destinations",Toast.LENGTH_SHORT).show();
+                        des_size = 0;
+                        break;
+                    }
+                    btn_text = 3;
+                    Log.i(TAG,"TOPSIS: Showing results for optimal travel destination");
+                    destinations.setVisibility(View.INVISIBLE);
+                    main_btn.setText("Results");
                     int best = topsis(destination_matrix);
 
                     if(check_des!=null)
